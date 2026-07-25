@@ -3,160 +3,514 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NAZAQAT | Collection</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Georgia,serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-background:#f8f3ed;
-color:#333;
+body {
+    font-family: Arial, sans-serif;
+    background: #fbf8f4;
+    color: #382522;
 }
 
-header{
-background:#efe3d6;
-padding:25px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+/* TOP BAR */
+.topbar {
+    background: #a95e68;
+    color: white;
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
-header h1{
-font-size:48px;
-letter-spacing:4px;
-color:#6e5339;
+/* HEADER */
+header {
+    background: #fffaf6;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee4df;
 }
 
-header p{
-margin-top:8px;
-font-size:20px;
-font-style:italic;
-color:#8b6b4a;
+.logo img {
+    width: 115px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-nav{
-margin-top:20px;
+nav {
+    display: flex;
+    gap: 35px;
 }
 
-nav a{
-text-decoration:none;
-background:#8b6b4a;
-color:white;
-padding:12px 28px;
-border-radius:30px;
-margin:8px;
-display:inline-block;
-transition:.3s;
+nav a {
+    text-decoration: none;
+    color: #382522;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
-nav a:hover{
-background:#6e5339;
+nav a:hover {
+    color: #a95e68;
 }
 
-h2{
-text-align:center;
-margin:60px 0 15px;
-font-size:42px;
-color:#6e5339;
+nav .active {
+    color: #a95e68;
+    border-bottom: 1px solid #a95e68;
+    padding-bottom: 5px;
 }
 
-.subtitle{
-text-align:center;
-font-size:18px;
-margin-bottom:45px;
-color:#777;
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+    background: linear-gradient(135deg, #f7ede7, #fffaf6);
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
-padding:0 8% 80px;
+.hero h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
-.gallery img{
-width:100%;
-border-radius:18px;
-box-shadow:0 12px 30px rgba(0,0,0,.12);
-transition:.3s;
+.hero p {
+    color: #765e58;
+    font-size: 15px;
 }
 
-.gallery img:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 35px rgba(0,0,0,.18);
+/* COLLECTION */
+.collection {
+    max-width: 1250px;
+    margin: auto;
+    padding: 50px 25px 70px;
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-footer p{
-margin:5px;
+.section-title span {
+    color: #a95e68;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 35px;
+    margin-top: 8px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #eee5e0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background: #f1ebe6;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.new {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #a95e68;
+    color: white;
+    padding: 7px 14px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.product-info {
+    padding: 20px 15px 22px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #806b65;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 42px;
+}
+
+.price {
+    display: block;
+    color: #a95e68;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    margin: 13px 0;
+}
+
+.order {
+    display: block;
+    background: #a95e68;
+    color: white;
+    padding: 12px 10px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.order:hover {
+    background: #854851;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* FOOTER */
+footer {
+    background: #f2e8e2;
+    padding: 45px 20px 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #75605a;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    margin: 25px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #382522;
+    margin: 0 15px;
+    font-size: 12px;
+}
+
+.copyright {
+    border-top: 1px solid #dacbc4;
+    padding-top: 18px;
+    font-size: 11px;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box {
+        height: auto;
+    }
+
+    .image-box img {
+        height: auto;
+        object-fit: contain;
+    }
+}
 </style>
-
 </head>
 
 <body>
 
+<div class="topbar">
+    FREE NATIONWIDE DELIVERY ACROSS PAKISTAN &nbsp;&nbsp; | &nbsp;&nbsp; CASH ON DELIVERY AVAILABLE
+</div>
+
 <header>
 
-<h1>NAZAQAT</h1>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="NAZAQAT Logo">
+        </a>
+    </div>
 
-<p>Grace In Every Stitch</p>
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="https://wa.me/923166955002" target="_blank">Order on WhatsApp</a>
-
-</nav>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="collection.html" class="active">COLLECTION</a>
+        <a href="https://wa.me/923166955002">CONTACT</a>
+    </nav>
 
 </header>
 
-<h2>Summer Collection</h2>
+<section class="hero">
+    <h1>Our Collection</h1>
+    <p>Premium Pakistani stitched dresses crafted with elegance, grace and love.</p>
+</section>
 
-<p class="subtitle">
-Discover timeless elegance crafted for the modern woman.
-</p>
+<section class="collection">
 
-<div class="gallery">
+    <div class="section-title">
+        <span>NAZAQAT</span>
+        <h2>Discover Our Latest Designs</h2>
+    </div>
 
-<img src="images/poster1.jpg" alt="Poster 1">
+    <div class="products">
 
-<img src="images/poster2.jpg" alt="Poster 2">
+        <!-- DRESS 1 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/Dress1.png" alt="NAZAQAT Dress 1">
+            </div>
 
-<img src="images/poster3.jpg" alt="Poster 3">
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Elegant stitched Pakistani ensemble designed for timeless style.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%201">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
 
-<img src="images/poster4.jpg" alt="Poster 4">
+        <!-- DRESS 2 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/Dress2.png" alt="NAZAQAT Dress 2">
+            </div>
 
-<img src="images/poster5.jpg" alt="Poster 5">
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Beautiful stitched wear combining tradition with modern elegance.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%202">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
 
-<img src="images/poster6.jpg" alt="Poster 6">
+        <!-- DRESS 3 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress3.png" alt="NAZAQAT Dress 3">
+            </div>
 
-<img src="images/poster7.jpg" alt="Poster 7">
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Graceful Pakistani stitched wear made for effortless elegance.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%203">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
 
-</div>
+        <!-- DRESS 4 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress4.png" alt="NAZAQAT Dress 4">
+            </div>
+
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Premium design celebrating feminine grace and craftsmanship.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%204">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+
+        <!-- DRESS 5 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress5.png" alt="NAZAQAT Dress 5">
+            </div>
+
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Refined stitched ensemble created with attention to every detail.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%205">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+
+        <!-- DRESS 6 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress%206.png" alt="NAZAQAT Dress 6">
+            </div>
+
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>A timeless design for the modern woman who loves traditional style.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%206">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+
+        <!-- DRESS 7 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress%207.png" alt="NAZAQAT Dress 7">
+            </div>
+
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Beautifully stitched Pakistani fashion with an elegant finish.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%207">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+
+        <!-- DRESS 8 -->
+        <div class="product">
+            <div class="image-box">
+                <span class="new">NEW</span>
+                <img src="images/dress%208.png" alt="NAZAQAT Dress 8">
+            </div>
+
+            <div class="product-info">
+                <h3>Gul Rukh</h3>
+                <p>Luxury stitched wear created to bring grace to every occasion.</p>
+                <span class="price">Price on Request</span>
+                <a class="order"
+                   href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20am%20interested%20in%20Dress%208">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <footer>
 
-<p><strong>NAZAQAT</strong></p>
+    <div class="footer-logo">
+        <img src="images/logo.jpg" alt="NAZAQAT Logo">
+    </div>
 
-<p>Grace In Every Stitch</p>
+    <h2>NAZAQAT</h2>
 
-<p>Order on WhatsApp: +92 316 6955002</p>
+    <p>Grace In Every Stitch</p>
+
+    <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="collection.html">COLLECTION</a>
+        <a href="https://wa.me/923166955002">WHATSAPP</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 NAZAQAT. All Rights Reserved.
+    </p>
 
 </footer>
+
+<a class="whatsapp"
+   href="https://wa.me/923166955002"
+   target="_blank">
+    CHAT ON<br>WHATSAPP
+</a>
 
 </body>
 </html>
