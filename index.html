@@ -1,717 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NAZAQAT | Grace In Every Stitch</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#fbf8f4;
-    color:#382522;
+font-family:Poppins,sans-serif;
+background:#faf7f2;
+color:#3b2a2a;
 }
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/* TOP BAR */
 
 .topbar{
-    background:#a85f68;
-    color:white;
-    text-align:center;
-    padding:9px 15px;
-    font-size:11px;
-    letter-spacing:1.3px;
+background:#8b5c67;
+color:white;
+padding:10px;
+font-size:13px;
+text-align:center;
+letter-spacing:1px;
 }
 
-/* NAVIGATION */
-
-.navbar{
-    background:#fffaf5;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:12px 6%;
-    border-bottom:1px solid #eee4dc;
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-.nav-left,
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.navbar a{
-    font-size:12px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-.navbar a:hover{
-    color:#a85f68;
+header{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 7%;
+box-shadow:0 2px 12px rgba(0,0,0,.06);
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo img{
-    width:125px;
-    height:80px;
-    object-fit:contain;
+height:90px;
 }
 
-/* HERO */
+nav a{
+text-decoration:none;
+margin:0 18px;
+color:#4a3232;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#a35c73;
+}
 
 .hero{
-    min-height:630px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:
-    radial-gradient(circle at 20% 30%, #fff 0%, transparent 35%),
-    linear-gradient(110deg,#fbf4ed,#ead5c5);
-}
-
-.hero-text{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:70px 8%;
-}
-
-.hero-small{
-    color:#a85f68;
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:12px;
-    margin-bottom:18px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:80px 8%;
+gap:60px;
+background:#fffdf9;
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:68px;
-    line-height:1.03;
-    margin-bottom:22px;
+font-family:"Cormorant Garamond",serif;
+font-size:68px;
+line-height:1;
+margin-bottom:20px;
 }
 
-.hero-description{
-    max-width:480px;
-    font-family:Georgia,serif;
-    font-size:18px;
-    line-height:1.7;
-    color:#725b55;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+.hero p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:35px;
+color:#666;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 27px;
-    font-size:12px;
-    letter-spacing:1.3px;
-    text-transform:uppercase;
-    transition:.25s;
+display:inline-block;
+background:#8b5c67;
+color:white;
+padding:16px 34px;
+text-decoration:none;
+border-radius:40px;
+margin-right:15px;
+transition:.3s;
 }
 
-.btn-primary{
-    background:#a85f68;
-    color:white;
-    border:1px solid #a85f68;
+.btn:hover{
+background:#714550;
 }
 
-.btn-primary:hover{
-    background:#864750;
+.hero img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.10);
 }
 
-.btn-outline{
-    border:1px solid #a85f68;
-    color:#864750;
-    background:rgba(255,255,255,.45);
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+padding:70px 8%;
+background:white;
+text-align:center;
 }
 
-.btn-outline:hover{
-    background:#a85f68;
-    color:white;
+.feature{
+padding:30px;
+border-radius:18px;
+background:#faf6f0;
 }
 
-.hero-image{
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.hero-image img{
-    width:100%;
-    height:630px;
-    object-fit:cover;
-}
-
-/* BENEFITS */
-
-.benefits{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:white;
-    border-bottom:1px solid #eadfd6;
-}
-
-.benefit{
-    text-align:center;
-    padding:35px 20px;
-    border-right:1px solid #eadfd6;
-}
-
-.benefit:last-child{
-    border-right:none;
-}
-
-.benefit-icon{
-    font-size:29px;
-    margin-bottom:12px;
-}
-
-.benefit h3{
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:8px;
-}
-
-.benefit p{
-    font-size:12px;
-    color:#786965;
-}
-
-/* COLLECTION INTRO */
-
-.collection-intro{
-    text-align:center;
-    padding:90px 20px 55px;
-}
-
-.section-small{
-    color:#a85f68;
-    letter-spacing:4px;
-    font-size:11px;
-    text-transform:uppercase;
-}
-
-.collection-intro h2,
-.about-text h2{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:45px;
-    margin:15px 0;
-}
-
-.collection-intro p{
-    max-width:620px;
-    margin:auto;
-    color:#75645f;
-    line-height:1.8;
-}
-
-/* FEATURED COLLECTION */
-
-.featured{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    padding:0 6% 90px;
-}
-
-.product{
-    background:white;
-    box-shadow:0 8px 30px rgba(70,40,30,.07);
-    overflow:hidden;
-}
-
-.product img{
-    width:100%;
-    aspect-ratio:4/5;
-    object-fit:cover;
-    display:block;
-}
-
-.product-info{
-    text-align:center;
-    padding:22px;
-}
-
-.product-info h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:21px;
-    margin-bottom:8px;
-}
-
-.product-info p{
-    color:#a85f68;
-    margin-bottom:17px;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:#efe1d7;
-}
-
-.about-image img{
-    width:100%;
-    height:550px;
-    object-fit:cover;
-    display:block;
-}
-
-.about-text{
-    padding:70px 9%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.about-text p{
-    line-height:1.9;
-    color:#6f5d58;
-    margin-bottom:28px;
-}
-
-/* BRAND STRIP */
-
-.brand-strip{
-    background:#a85f68;
-    color:white;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    padding:32px 5%;
-}
-
-.brand-item{
-    text-align:center;
-    padding:10px;
-}
-
-.brand-item strong{
-    display:block;
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:6px;
-}
-
-.brand-item span{
-    font-size:11px;
-    opacity:.85;
-}
-
-/* INSTAGRAM */
-
-.instagram{
-    padding:80px 6%;
-    text-align:center;
-}
-
-.instagram h2{
-    font-family:Georgia,serif;
-    font-size:40px;
-    font-weight:normal;
-    margin:12px 0;
-}
-
-.instagram p{
-    color:#76645f;
-    margin-bottom:30px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#352421;
-    color:#f7eee8;
-    padding:55px 7% 20px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1.3fr;
-    gap:60px;
-}
-
-.footer-logo{
-    width:135px;
-    background:#eee4d3;
-    border-radius:50%;
-    margin-bottom:20px;
-}
-
-footer h3{
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:18px;
-}
-
-footer p,
-footer a{
-    font-size:13px;
-    line-height:2;
-    color:#ddccc5;
-}
-
-.footer-bottom{
-    border-top:1px solid #5a4540;
-    margin-top:40px;
-    padding-top:20px;
-    text-align:center;
-    font-size:11px;
-    color:#bca8a1;
-}
-
-/* WHATSAPP FLOAT */
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-    z-index:200;
-}
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-    .navbar{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    .nav-left,
-    .nav-right{
-        gap:15px;
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .hero-text{
-        text-align:center;
-        align-items:center;
-        padding:65px 25px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .hero-image img{
-        height:auto;
-    }
-
-    .benefits{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .featured{
-        grid-template-columns:1fr;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .brand-strip{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
+.feature h3{
+margin-top:15px;
+margin-bottom:10px;
+font-family:"Cormorant Garamond",serif;
+font-size:30px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="topbar">
-FREE NATIONWIDE DELIVERY ACROSS PAKISTAN &nbsp;&nbsp; | &nbsp;&nbsp; CASH ON DELIVERY AVAILABLE
+FREE NATIONWIDE DELIVERY • CASH ON DELIVERY AVAILABLE
 </div>
 
-<nav class="navbar">
+<header>
 
-<div class="nav-left">
+<div class="logo">
+<img src="images/logo.png">
+</div>
+
+<nav>
+
 <a href="index.html">Home</a>
+
 <a href="collection.html">Collection</a>
-<a href="#about">About Us</a>
-</div>
 
-<a class="logo" href="index.html">
-<img src="images/logo.jpeg" alt="NAZAQAT">
-</a>
+<a href="#">About Us</a>
 
-<div class="nav-right">
-<a href="#why">Why Nazaqat</a>
-<a href="https://wa.me/923166955002">Contact</a>
-</div>
+<a href="#">Contact</a>
 
 </nav>
 
+</header>
 
 <section class="hero">
 
-<div class="hero-text">
+<div>
 
-<div class="hero-small">Gul Rukh Collection</div>
+<h1>Grace In Every Stitch</h1>
 
-<h1>Grace in<br>Every Stitch</h1>
-
-<p class="hero-description">
-Timeless prints. Refined craftsmanship. Discover stitched Pakistani
-fashion created for the modern woman with a touch of tradition and grace.
+<p>
+Luxury Pakistani stitched wear designed for women who appreciate timeless elegance, premium fabrics and beautiful craftsmanship.
 </p>
 
-<div class="hero-buttons">
-
-<a href="collection.html" class="btn btn-primary">
+<a href="collection.html" class="btn">
 Shop Collection
 </a>
 
-<a href="https://wa.me/923166955002" class="btn btn-outline">
+<a href="https://wa.me/923166955002" class="btn">
 Order on WhatsApp
 </a>
 
 </div>
-</div>
-
-<div class="hero-image">
-<img src="images/poster5.jpg" alt="NAZAQAT Gul Rukh Collection">
-</div>
-
-</section>
-
-
-<section class="benefits" id="why">
-
-<div class="benefit">
-<div class="benefit-icon">♧</div>
-<h3>NATIONWIDE DELIVERY</h3>
-<p>Available across Pakistan</p>
-</div>
-
-<div class="benefit">
-<div class="benefit-icon">▣</div>
-<h3>CASH ON DELIVERY</h3>
-<p>Pay when you receive</p>
-</div>
-
-<div class="benefit">
-<div class="benefit-icon">✧</div>
-<h3>PREMIUM QUALITY</h3>
-<p>Fine fabrics & stitching</p>
-</div>
-
-<div class="benefit">
-<div class="benefit-icon">♡</div>
-<h3>MADE WITH CARE</h3>
-<p>Thoughtfully crafted for you</p>
-</div>
-
-</section>
-
-
-<section class="collection-intro">
-
-<div class="section-small">Discover Nazaqat</div>
-
-<h2>The Gul Rukh Collection</h2>
-
-<p>
-A celebration of feminine elegance, beautiful prints and timeless
-Pakistani style. Explore our latest stitched designs.
-</p>
-
-</section>
-
-
-<section class="featured">
-
-<div class="product">
-<img src="images/poster1.jpg" alt="NAZAQAT Dress">
-<div class="product-info">
-<h3>Floral Elegance</h3>
-<p>Price on Request</p>
-<a href="https://wa.me/923166955002" class="btn btn-primary">Order Now</a>
-</div>
-</div>
-
-<div class="product">
-<img src="images/poster2.jpg" alt="NAZAQAT Dress">
-<div class="product-info">
-<h3>Timeless Bloom</h3>
-<p>Price on Request</p>
-<a href="https://wa.me/923166955002" class="btn btn-primary">Order Now</a>
-</div>
-</div>
-
-<div class="product">
-<img src="images/poster3.jpg" alt="NAZAQAT Dress">
-<div class="product-info">
-<h3>Summer Grace</h3>
-<p>Price on Request</p>
-<a href="https://wa.me/923166955002" class="btn btn-primary">Order Now</a>
-</div>
-</div>
-
-</section>
-
-
-<section class="about" id="about">
-
-<div class="about-image">
-<img src="images/poster4.jpg" alt="About NAZAQAT">
-</div>
-
-<div class="about-text">
-
-<div class="section-small">About Nazaqat</div>
-
-<h2>Where Tradition<br>Meets Elegance</h2>
-
-<p>
-At NAZAQAT, we celebrate the timeless beauty of Pakistani fashion.
-Our collections combine graceful prints, elegant details and careful
-stitching to create pieces designed to make every woman feel confident,
-refined and effortlessly beautiful.
-</p>
-
-<a href="collection.html" class="btn btn-primary">
-Explore Collection
-</a>
-
-</div>
-
-</section>
-
-
-<section class="brand-strip">
-
-<div class="brand-item">
-<strong>PREMIUM FABRIC</strong>
-<span>Soft, beautiful & high quality</span>
-</div>
-
-<div class="brand-item">
-<strong>ELEGANT STITCHING</strong>
-<span>Attention to every detail</span>
-</div>
-
-<div class="brand-item">
-<strong>TIMELESS DESIGNS</strong>
-<span>Created for modern women</span>
-</div>
-
-<div class="brand-item">
-<strong>TRUSTED QUALITY</strong>
-<span>Made with care</span>
-</div>
-
-</section>
-
-
-<section class="instagram">
-
-<div class="section-small">Follow Our Journey</div>
-
-<h2>@nazaqat.official</h2>
-
-<p>
-Follow NAZAQAT for new arrivals, styling inspiration and collection updates.
-</p>
-
-</section>
-
-
-<footer>
-
-<div class="footer-grid">
 
 <div>
-<img class="footer-logo" src="images/logo.jpeg" alt="NAZAQAT">
 
-<p>
-Timeless Pakistani stitched fashion created with grace,
-quality and attention to detail.
-</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-
-<p>
-<a href="index.html">Home</a><br>
-<a href="collection.html">Collection</a><br>
-<a href="#about">About Us</a><br>
-<a href="#why">Why Nazaqat</a>
-</p>
-</div>
-
-<div>
-<h3>Get In Touch</h3>
-
-<p>
-WhatsApp: +92 316 6955002<br>
-Pakistan
-</p>
-
-<a href="https://wa.me/923166955002">
-Order through WhatsApp
-</a>
+<img src="images/Dress1.png">
 
 </div>
 
+</section>
+
+<section class="features">
+
+<div class="feature">
+
+<h3>Premium Quality</h3>
+
+<p>Beautiful stitching with premium fabric.</p>
+
 </div>
 
-<div class="footer-bottom">
-© 2026 NAZAQAT. All Rights Reserved. • Grace In Every Stitch
+<div class="feature">
+
+<h3>Cash on Delivery</h3>
+
+<p>Available all across Pakistan.</p>
+
 </div>
 
-</footer>
+<div class="feature">
 
+<h3>Fast Delivery</h3>
 
-<a class="whatsapp"
-href="https://wa.me/923166955002"
-aria-label="Order on WhatsApp">
-◉
-</a>
+<p>Nationwide shipping.</p>
 
-</body>
-</html>
+</div>
+
+<div class="feature">
+
+<h3>Elegant Designs</h3>
+
+<p>Timeless collections for every occasion.</p>
+
+</div>
+
+</section>
