@@ -34,6 +34,7 @@ a{
     color:inherit;
 }
 
+
 /* =========================
    TOP BAR
 ========================= */
@@ -46,6 +47,7 @@ a{
     font-size:12px;
     letter-spacing:1.5px;
 }
+
 
 /* =========================
    HEADER
@@ -87,6 +89,7 @@ header{
     color:#a45c68;
 }
 
+
 /* =========================
    LOGO
 ========================= */
@@ -103,6 +106,7 @@ header{
     object-fit:contain;
     display:block;
 }
+
 
 /* =========================
    COLLECTION BANNER
@@ -144,6 +148,7 @@ header{
     line-height:1.8;
 }
 
+
 /* =========================
    INFORMATION BAR
 ========================= */
@@ -163,6 +168,7 @@ header{
     font-size:11px;
     letter-spacing:1.2px;
 }
+
 
 /* =========================
    COLLECTION AREA
@@ -192,18 +198,22 @@ header{
     font-weight:normal;
 }
 
+
 /* =========================
    PRODUCT GRID
 
-   3 per row gives the tall
-   posters enough room.
+   2 LARGE POSTERS PER ROW
+   SO POSTER TEXT IS READABLE
 ========================= */
 
 .products{
+    max-width:1200px;
+    margin:0 auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:35px;
+    grid-template-columns:repeat(2,1fr);
+    gap:45px;
 }
+
 
 /* =========================
    PRODUCT CARD
@@ -222,17 +232,18 @@ header{
     box-shadow:0 15px 35px rgba(60,40,35,0.10);
 }
 
+
 /* =========================
    POSTER IMAGE
 
    IMPORTANT:
-   object-fit: contain means
-   poster will NOT be cropped.
+   NATURAL POSTER SIZE
+   NO CROPPING
+   NO FORCED HEIGHT
 ========================= */
 
 .product-image{
     width:100%;
-    height:620px;
     background:#f7f1ed;
     display:flex;
     align-items:center;
@@ -242,7 +253,7 @@ header{
 
 .product-image img{
     width:100%;
-    height:100%;
+    height:auto;
     object-fit:contain;
     object-position:center;
     display:block;
@@ -250,8 +261,9 @@ header{
 }
 
 .product:hover .product-image img{
-    transform:scale(1.015);
+    transform:scale(1.01);
 }
+
 
 /* =========================
    VOLUME BADGE
@@ -268,6 +280,7 @@ header{
     font-size:10px;
     letter-spacing:1.5px;
 }
+
 
 /* =========================
    PRODUCT INFORMATION
@@ -307,6 +320,7 @@ header{
     margin-bottom:20px;
 }
 
+
 /* =========================
    ORDER BUTTON
 ========================= */
@@ -325,6 +339,7 @@ header{
 .order:hover{
     background:#874954;
 }
+
 
 /* =========================
    ORDER SECTION
@@ -363,6 +378,7 @@ header{
 .main-order-button:hover{
     background:#874954;
 }
+
 
 /* =========================
    FOOTER
@@ -417,6 +433,7 @@ footer a{
     font-size:12px;
 }
 
+
 /* =========================
    FLOATING WHATSAPP
 ========================= */
@@ -435,27 +452,26 @@ footer a{
     box-shadow:0 5px 18px rgba(0,0,0,0.15);
 }
 
+
 /* =========================
    TABLET
 ========================= */
 
-@media(max-width:1050px){
+@media(max-width:900px){
 
     .products{
         grid-template-columns:repeat(2,1fr);
-    }
-
-    .product-image{
-        height:650px;
+        gap:25px;
     }
 
 }
+
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:700px){
+@media(max-width:650px){
 
     .topbar{
         font-size:10px;
@@ -502,11 +518,12 @@ footer a{
 
     .products{
         grid-template-columns:1fr;
+        gap:30px;
     }
 
-    .product-image{
+    .product-image img{
+        width:100%;
         height:auto;
-        aspect-ratio:4 / 5;
     }
 
     .footer-grid{
@@ -520,6 +537,7 @@ footer a{
 
 </head>
 
+
 <body>
 
 
@@ -528,11 +546,13 @@ footer a{
 ========================= -->
 
 <div class="topbar">
+
 DELIVERY AVAILABLE ALL OVER PAKISTAN
 &nbsp; | &nbsp;
 DELIVERY CHARGES APPLY
 &nbsp; | &nbsp;
 CASH ON DELIVERY AVAILABLE
+
 </div>
 
 
@@ -545,10 +565,21 @@ CASH ON DELIVERY AVAILABLE
 <div class="navbar">
 
 <nav class="nav-left">
-<a href="index.html">HOME</a>
-<a href="collection.html">COLLECTION</a>
-<a href="index.html#about">ABOUT US</a>
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="collection.html">
+COLLECTION
+</a>
+
+<a href="index.html#about">
+ABOUT US
+</a>
+
 </nav>
+
 
 <a class="logo" href="index.html">
 
@@ -558,8 +589,12 @@ alt="NAZAQAT Logo">
 
 </a>
 
+
 <nav class="nav-right">
-<a href="#contact">CONTACT</a>
+
+<a href="#contact">
+CONTACT
+</a>
 
 <a href="https://wa.me/923166955002">
 WHATSAPP
@@ -579,38 +614,59 @@ WHATSAPP
 <section class="collection-banner">
 
 <div class="collection-small">
-NAZAQAT • FIRST VOLUME
+
+NAZAQAT • GUL RUKH VOLUME 1
+
 </div>
 
+
 <h1>
+
 Gul Rukh
-<span>Volume 1</span>
+
+<span>
+Volume 1
+</span>
+
 </h1>
 
+
 <p>
+
 Introducing Gul Rukh Volume 1, the first collection from NAZAQAT.
 Eight distinctive stitched Pakistani designs brought together
 through graceful colours, elegant details and timeless style.
+
 </p>
 
 </section>
 
 
 <!-- =========================
-     INFORMATION
+     INFORMATION BAR
 ========================= -->
 
 <div class="info-bar">
 
-<span>8 EXCLUSIVE DESIGNS</span>
+<span>
+8 EXCLUSIVE DESIGNS
+</span>
 
-<span>GUL RUKH • VOLUME 1</span>
+<span>
+GUL RUKH • VOLUME 1
+</span>
 
-<span>STITCHED COLLECTION</span>
+<span>
+STITCHED COLLECTION
+</span>
 
-<span>DELIVERY ACROSS PAKISTAN</span>
+<span>
+DELIVERY ACROSS PAKISTAN
+</span>
 
-<span>DELIVERY CHARGES APPLY</span>
+<span>
+DELIVERY CHARGES APPLY
+</span>
 
 </div>
 
@@ -624,7 +680,7 @@ through graceful colours, elegant details and timeless style.
 <div class="collection-heading">
 
 <p>
-GRACE IN EVERY STITCH
+GUL RUKH • VOLUME 1
 </p>
 
 <h2>
@@ -654,6 +710,7 @@ src="images/Dress1.png"
 alt="Dusty Rose Enigma">
 
 </div>
+
 
 <div class="product-details">
 
@@ -704,6 +761,7 @@ alt="Amethyst Threadwork">
 
 </div>
 
+
 <div class="product-details">
 
 <div class="design-number">
@@ -752,6 +810,7 @@ src="images/dress3.png"
 alt="Saffron Breeze">
 
 </div>
+
 
 <div class="product-details">
 
@@ -802,6 +861,7 @@ alt="Emerald Deco">
 
 </div>
 
+
 <div class="product-details">
 
 <div class="design-number">
@@ -850,6 +910,7 @@ src="images/dress5.png"
 alt="Gul Rukh Essence">
 
 </div>
+
 
 <div class="product-details">
 
@@ -900,6 +961,7 @@ alt="Master Piece">
 
 </div>
 
+
 <div class="product-details">
 
 <div class="design-number">
@@ -948,6 +1010,7 @@ src="images/dress%207.png"
 alt="Coral Symphony">
 
 </div>
+
 
 <div class="product-details">
 
@@ -998,6 +1061,7 @@ alt="Terracotta Motif">
 
 </div>
 
+
 <div class="product-details">
 
 <div class="design-number">
@@ -1009,7 +1073,7 @@ Terracotta Motif
 </h3>
 
 <p class="description">
-Earthy terracotta tones complete the first Gul Rukh volume with elegance.
+Earthy terracotta tones complete Gul Rukh Volume 1 with timeless elegance.
 </p>
 
 <div class="price">
@@ -1045,9 +1109,11 @@ Found Your Favourite?
 </h2>
 
 <p>
+
 Choose your favourite design from Gul Rukh Volume 1 and
 contact NAZAQAT directly through WhatsApp to place your order.
 Delivery is available all over Pakistan and delivery charges apply.
+
 </p>
 
 <a
@@ -1078,12 +1144,16 @@ src="images/nazaqat%20tranparent%20logo.png"
 alt="NAZAQAT Logo">
 
 <p>
+
 Elegant Pakistani stitched fashion created with attention
 to colour, detail and timeless style.
+
 </p>
 
 <p>
-<strong>Grace In Every Stitch.</strong>
+<strong>
+Grace In Every Stitch.
+</strong>
 </p>
 
 </div>
@@ -1125,22 +1195,26 @@ Get In Touch
 </h3>
 
 <p>
-WhatsApp<br>
+WhatsApp
+<br>
 +92 316 6955002
 </p>
 
 <p>
-Instagram<br>
+Instagram
+<br>
 @nazaqat_2012
 </p>
 
 <p>
-Delivery available all over Pakistan.<br>
+
+Delivery available all over Pakistan.
+<br>
 Delivery charges apply.
+
 </p>
 
 </div>
-
 
 </div>
 
