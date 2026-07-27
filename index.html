@@ -21,8 +21,8 @@ html{
 
 body{
     font-family:Arial, sans-serif;
-    background:#fffaf7;
-    color:#382c2a;
+    background:#fbf7f4;
+    color:#3b2927;
 }
 
 a{
@@ -30,489 +30,458 @@ a{
     color:inherit;
 }
 
-img{
-    max-width:100%;
-}
-
-/* TOP BAR */
+/* =========================
+   TOP DELIVERY BAR
+========================= */
 
 .topbar{
-    background:#9b5b68;
-    color:white;
+    background:#a45c68;
+    color:#ffffff;
     text-align:center;
     padding:10px 15px;
-    font-size:11px;
-    letter-spacing:1.3px;
+    font-size:13px;
+    letter-spacing:1.5px;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#fffaf7;
+    border-bottom:1px solid #eaded8;
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    min-height:145px;
+
     display:grid;
     grid-template-columns:1fr auto 1fr;
     align-items:center;
-    padding:10px 6%;
-    border-bottom:1px solid #eadfd9;
-    position:sticky;
-    top:0;
-    z-index:1000;
+
+    padding:10px 5%;
 }
 
 .nav-left,
 .nav-right{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:35px;
 }
 
 .nav-right{
     justify-content:flex-end;
 }
 
-header a{
-    font-size:11px;
-    text-transform:uppercase;
+.navbar a{
+    font-size:14px;
     letter-spacing:1px;
 }
 
-header a:hover{
-    color:#9b5b68;
+.navbar nav a:hover{
+    color:#a45c68;
 }
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 
 .logo{
-    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .logo img{
-    width:180px;
-    height:105px;
+    width:230px;
+    height:120px;
     object-fit:contain;
     display:block;
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
+    min-height:620px;
     display:grid;
     grid-template-columns:45% 55%;
-    min-height:620px;
-    background:#f6e9e2;
+    background:#f5e7df;
 }
 
 .hero-text{
-    padding:70px 10%;
+    padding:90px 8%;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
-.small-heading{
-    color:#9b5b68;
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:11px;
-    margin-bottom:20px;
+.edition{
+    color:#a45c68;
+    letter-spacing:6px;
+    font-size:14px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:65px;
-    font-weight:normal;
+    font-family:Georgia, serif;
+    font-size:68px;
     line-height:1.05;
-    margin-bottom:22px;
+    font-weight:normal;
+    margin-bottom:25px;
 }
 
 .hero h1 span{
-    color:#9b5b68;
+    color:#a45c68;
     font-style:italic;
 }
 
-.hero p{
-    color:#6f5e59;
+.hero-description{
+    font-size:17px;
     line-height:1.8;
-    font-family:Georgia,serif;
-    font-size:18px;
-    margin-bottom:30px;
-    max-width:500px;
+    max-width:560px;
+    margin-bottom:35px;
+    color:#624c48;
 }
 
 .buttons{
     display:flex;
-    gap:12px;
+    gap:15px;
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 25px;
-    text-transform:uppercase;
-    letter-spacing:1.2px;
-    font-size:10px;
-    border:1px solid #9b5b68;
+    background:#a45c68;
+    color:white;
+    padding:16px 28px;
+    font-size:13px;
+    letter-spacing:1px;
 }
 
-.btn-main{
-    background:#9b5b68;
-    color:white;
+.btn:hover{
+    background:#8f4e5a;
 }
 
 .btn-outline{
-    color:#9b5b68;
-    background:transparent;
-}
-
-.btn-main:hover{
-    background:#7d4551;
+    display:inline-block;
+    border:1px solid #a45c68;
+    color:#a45c68;
+    padding:15px 28px;
+    font-size:13px;
+    letter-spacing:1px;
 }
 
 .btn-outline:hover{
-    background:#9b5b68;
+    background:#a45c68;
     color:white;
 }
 
-/* HERO DRESS */
+/* HERO IMAGE */
 
 .hero-image{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:30px;
-    background:#f3e2da;
+    overflow:hidden;
+    min-height:620px;
 }
 
 .hero-image img{
     width:100%;
-    height:570px;
-    object-fit:contain;
+    height:100%;
+    min-height:620px;
+
+    object-fit:cover;
+    object-position:center top;
+
+    display:block;
 }
 
-/* FEATURES */
+/* =========================
+   BENEFITS
+========================= */
 
-.features{
+.benefits{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    background:white;
-    border-bottom:1px solid #eadfd9;
-}
 
-.feature{
     text-align:center;
-    padding:30px 15px;
-    border-right:1px solid #eadfd9;
+    background:white;
+
+    border-bottom:1px solid #eee1dc;
 }
 
-.feature:last-child{
+.benefit{
+    padding:30px 15px;
+    border-right:1px solid #eee1dc;
+}
+
+.benefit:last-child{
     border-right:none;
 }
 
-.feature .icon{
-    font-size:25px;
-    color:#9b5b68;
-    margin-bottom:10px;
+.benefit h3{
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:8px;
 }
 
-.feature h3{
-    font-family:Georgia,serif;
-    font-size:18px;
-    font-weight:normal;
-    margin-bottom:7px;
+.benefit p{
+    font-size:13px;
+    color:#76625e;
 }
 
-.feature p{
-    font-size:11px;
-    color:#776762;
-    line-height:1.6;
-}
+/* =========================
+   ABOUT
+========================= */
 
-/* COLLECTION PREVIEW */
-
-.collection{
-    padding:90px 7%;
+.about{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 6%;
     text-align:center;
-    background:#fffaf7;
 }
 
-.section-label{
-    color:#9b5b68;
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-size:10px;
+.small-title{
+    color:#a45c68;
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:15px;
 }
 
-.collection h2,
-.about-text h2,
-.contact h2{
-    font-family:Georgia,serif;
+.about h2,
+.featured h2,
+.instagram h2{
+    font-family:Georgia, serif;
+    font-size:45px;
     font-weight:normal;
-    font-size:48px;
-    margin:12px 0 15px;
+    margin-bottom:25px;
 }
 
-.section-intro{
-    max-width:650px;
-    margin:0 auto 40px;
-    color:#776661;
-    line-height:1.8;
-    font-size:14px;
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    color:#65514d;
+    font-size:16px;
+}
+
+/* =========================
+   FEATURED COLLECTION
+========================= */
+
+.featured{
+    padding:80px 5%;
+    background:#f4e8e2;
+    text-align:center;
 }
 
 .products{
+    max-width:1250px;
+    margin:40px auto 0;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:25px;
-    max-width:1150px;
-    margin:0 auto 40px;
 }
 
 .product{
     background:white;
-    padding:12px;
-    border:1px solid #eadfd9;
+    overflow:hidden;
+    padding-bottom:25px;
+
+    border:1px solid #eee1dc;
+
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
 .product-image{
-    background:#f7efeb;
-    height:450px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    height:420px;
     overflow:hidden;
+    background:#eee4df;
 }
 
 .product-image img{
     width:100%;
     height:100%;
-    object-fit:contain;
+
+    object-fit:cover;
+    object-position:center top;
+
+    display:block;
 }
 
 .product h3{
-    font-family:Georgia,serif;
+    font-family:Georgia, serif;
+    font-size:20px;
     font-weight:normal;
-    font-size:21px;
-    margin-top:18px;
+
+    margin:18px 10px 8px;
 }
 
-.product p{
-    color:#9b5b68;
+.price{
+    color:#a45c68;
     font-weight:bold;
-    margin:10px 0 15px;
-    font-size:14px;
+    margin-bottom:18px;
 }
 
-/* ABOUT */
+.order{
+    display:inline-block;
 
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:#f3e5de;
-}
-
-.about-image{
-    padding:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.about-image img{
-    width:100%;
-    height:620px;
-    object-fit:contain;
-}
-
-.about-text{
-    padding:70px 10%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.about-text p{
-    font-size:14px;
-    color:#6f5d58;
-    line-height:1.9;
-    margin-bottom:17px;
-}
-
-/* EDITION */
-
-.edition{
-    background:#9b5b68;
+    background:#a45c68;
     color:white;
-    text-align:center;
-    padding:75px 8%;
+
+    padding:12px 25px;
+
+    font-size:12px;
+    letter-spacing:1px;
 }
 
-.edition .section-label{
-    color:#f5dfe2;
+.order:hover{
+    background:#8f4e5a;
 }
 
-.edition h2{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:50px;
-    margin:12px 0 20px;
+.view-all{
+    margin-top:40px;
 }
 
-.edition p{
-    max-width:720px;
-    margin:0 auto 30px;
-    line-height:1.9;
-    color:#f8e9e6;
-    font-size:14px;
-}
-
-.edition .btn{
-    border-color:white;
-    color:white;
-}
-
-/* CONTACT */
-
-.contact{
-    padding:90px 7%;
-    background:white;
-    text-align:center;
-}
-
-.contact-grid{
-    max-width:1000px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.contact-box{
-    background:#faf3ef;
-    border:1px solid #eadfd9;
-    padding:35px 20px;
-}
-
-.contact-box h3{
-    font-family:Georgia,serif;
-    font-size:23px;
-    font-weight:normal;
-    margin-bottom:15px;
-}
-
-.contact-box p,
-.contact-box a{
-    color:#6f5e59;
-    line-height:1.8;
-    font-size:13px;
-}
-
-.contact-box a:hover{
-    color:#9b5b68;
-}
-
-/* INSTAGRAM */
+/* =========================
+   INSTAGRAM
+========================= */
 
 .instagram{
     text-align:center;
-    background:#f7eee9;
-    padding:70px 7%;
+    padding:80px 20px;
+    background:#fffaf7;
 }
 
 .instagram h2{
-    font-family:Georgia,serif;
-    font-size:42px;
-    font-weight:normal;
-    margin:12px 0;
+    margin-bottom:10px;
 }
 
 .instagram p{
-    color:#75635e;
+    color:#6d5955;
     margin-bottom:25px;
-    font-size:13px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#382725;
-    color:#eee1dc;
-    padding:50px 7% 20px;
+    background:#402b29;
+    color:#f8eeee;
+    padding:65px 6% 25px;
 }
 
 .footer-grid{
+    max-width:1300px;
+    margin:auto;
+
     display:grid;
-    grid-template-columns:2fr 1fr 1.3fr;
-    gap:50px;
+    grid-template-columns:2fr 1fr 1.4fr;
+    gap:60px;
 }
 
+/* FOOTER LOGO */
+
 .footer-logo{
-    width:190px;
-    height:120px;
+    width:220px;
+    height:125px;
+
     object-fit:contain;
-    margin-bottom:15px;
+    display:block;
+
+    margin-bottom:20px;
 }
 
 footer h3{
-    font-family:Georgia,serif;
-    font-size:20px;
-    font-weight:normal;
-    margin-bottom:15px;
+    font-family:Georgia, serif;
+    font-size:23px;
+    margin-bottom:20px;
 }
 
 footer p,
 footer a{
-    color:#d8c6c1;
-    font-size:12px;
+    font-size:14px;
     line-height:2;
 }
 
-.footer-bottom{
-    border-top:1px solid #5d4642;
-    margin-top:40px;
-    padding-top:18px;
-    text-align:center;
-    font-size:10px;
-    color:#bda9a4;
+.footer-links{
+    display:flex;
+    flex-direction:column;
 }
 
-/* WHATSAPP */
+.copyright{
+    max-width:1300px;
+    margin:45px auto 0;
+
+    border-top:1px solid #725652;
+
+    padding-top:20px;
+
+    text-align:center;
+    font-size:12px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
 
 .whatsapp{
     position:fixed;
-    right:22px;
-    bottom:22px;
+
+    right:25px;
+    bottom:25px;
+
     background:#25D366;
     color:white;
-    padding:15px 20px;
+
+    padding:16px 23px;
+
     border-radius:30px;
-    font-size:12px;
+
     font-weight:bold;
-    box-shadow:0 6px 20px rgba(0,0,0,.2);
-    z-index:999;
+    font-size:14px;
+
+    z-index:1000;
+
+    box-shadow:0 5px 18px rgba(0,0,0,0.15);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
-    header{
+    .navbar{
         grid-template-columns:1fr;
-        text-align:center;
+        gap:15px;
+        padding:15px;
     }
 
     .logo{
-        grid-row:1;
+        order:-1;
     }
 
     .logo img{
-        margin:auto;
+        width:200px;
+        height:105px;
     }
 
     .nav-left,
     .nav-right{
         justify-content:center;
+        gap:20px;
         flex-wrap:wrap;
-        margin:7px 0;
     }
 
     .hero{
@@ -520,71 +489,91 @@ footer a{
     }
 
     .hero-text{
-        text-align:center;
-        align-items:center;
-        padding:60px 25px;
+        padding:65px 8%;
     }
 
     .hero h1{
         font-size:50px;
     }
 
-    .hero-image img{
-        height:auto;
-        max-height:650px;
+    .hero-image{
+        min-height:520px;
     }
 
-    .features{
+    .hero-image img{
+        min-height:520px;
+    }
+
+    .benefits{
         grid-template-columns:1fr 1fr;
     }
 
     .products{
-        grid-template-columns:1fr;
-        max-width:500px;
-    }
-
-    .product-image{
-        height:auto;
-    }
-
-    .product-image img{
-        height:auto;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .about-image img{
-        height:auto;
-    }
-
-    .about-text{
-        text-align:center;
-        padding:60px 30px;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
+}
 
+@media(max-width:550px){
+
+    .topbar{
+        font-size:10px;
+        line-height:1.6;
+    }
+
+    .logo img{
+        width:180px;
+        height:95px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-text{
+        padding:55px 7%;
+    }
+
+    .hero-image,
+    .hero-image img{
+        min-height:450px;
+    }
+
+    .benefits{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:500px;
+    }
+
+    .about h2,
+    .featured h2,
+    .instagram h2{
+        font-size:36px;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
 
-
 <!-- TOP BAR -->
 
 <div class="topbar">
-DELIVERY AVAILABLE ALL OVER PAKISTAN &nbsp; | &nbsp; CASH ON DELIVERY AVAILABLE
+    DELIVERY AVAILABLE ALL OVER PAKISTAN
+    &nbsp; | &nbsp;
+    DELIVERY CHARGES APPLY
+    &nbsp; | &nbsp;
+    CASH ON DELIVERY AVAILABLE
 </div>
 
 
@@ -592,32 +581,47 @@ DELIVERY AVAILABLE ALL OVER PAKISTAN &nbsp; | &nbsp; CASH ON DELIVERY AVAILABLE
 
 <header>
 
-<div class="nav-left">
+<div class="navbar">
 
-<a href="index.html">Home</a>
+    <nav class="nav-left">
 
-<a href="collection.html">Collection</a>
+        <a href="index.html">
+            HOME
+        </a>
 
-<a href="#about">About Us</a>
+        <a href="collection.html">
+            COLLECTION
+        </a>
 
-</div>
+        <a href="#about">
+            ABOUT US
+        </a>
 
-
-<a href="index.html" class="logo">
-
-<img src="images/nazaqat tranparent logo.png"
-alt="NAZAQAT Logo">
-
-</a>
+    </nav>
 
 
-<div class="nav-right">
+    <!-- EXACT GITHUB LOGO FILE -->
 
-<a href="#contact">Contact</a>
+    <a class="logo" href="index.html">
 
-<a href="https://wa.me/923166955002">
-WhatsApp
-</a>
+        <img
+        src="images/nazaqat%20tranparent%20logo.png"
+        alt="NAZAQAT - Grace In Every Stitch">
+
+    </a>
+
+
+    <nav class="nav-right">
+
+        <a href="#contact">
+            CONTACT
+        </a>
+
+        <a href="https://wa.me/923166955002">
+            WHATSAPP
+        </a>
+
+    </nav>
 
 </div>
 
@@ -630,358 +634,308 @@ WhatsApp
 
 <div class="hero-text">
 
-<div class="small-heading">
-Gul Rukh • Edition 1
-</div>
+    <div class="edition">
+        GUL RUKH • EDITION 1
+    </div>
 
-<h1>
-Grace In<br>
-<span>Every Stitch</span>
-</h1>
+    <h1>
+        Grace In
+        <br>
+        <span>Every Stitch</span>
+    </h1>
 
-<p>
-Discover Gul Rukh Edition 1, a celebration of graceful Pakistani
-fashion featuring distinctive prints, beautiful colours and
-thoughtfully stitched designs for the modern woman.
-</p>
+    <p class="hero-description">
 
-<div class="buttons">
+        Discover Gul Rukh Edition 1 — a celebration of
+        elegant Pakistani stitched fashion, beautiful colours
+        and timeless craftsmanship created for the modern woman.
 
-<a href="collection.html"
-class="btn btn-main">
-Shop Collection
-</a>
+    </p>
 
-<a href="https://wa.me/923166955002"
-class="btn btn-outline">
-Order on WhatsApp
-</a>
 
-</div>
+    <div class="buttons">
+
+        <a
+        class="btn"
+        href="collection.html">
+
+            SHOP COLLECTION
+
+        </a>
+
+
+        <a
+        class="btn-outline"
+        href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20place%20an%20order.">
+
+            ORDER ON WHATSAPP
+
+        </a>
+
+    </div>
 
 </div>
 
 
 <div class="hero-image">
 
-<img src="images/Dress1.png"
-alt="Dusty Rose Enigma">
+    <img
+    src="images/Dress1.png"
+    alt="NAZAQAT Gul Rukh Edition 1">
 
 </div>
 
 </section>
 
 
-<!-- FEATURES -->
+<!-- BENEFITS -->
 
-<section class="features">
+<section class="benefits">
 
-<div class="feature">
+<div class="benefit">
 
-<div class="icon">✦</div>
+    <h3>DELIVERY ACROSS PAKISTAN</h3>
 
-<h3>Premium Quality</h3>
-
-<p>
-Carefully selected designs and quality stitching.
-</p>
+    <p>
+        Delivery charges apply
+    </p>
 
 </div>
 
 
-<div class="feature">
+<div class="benefit">
 
-<div class="icon">⌂</div>
+    <h3>CASH ON DELIVERY</h3>
 
-<h3>Pakistan Delivery</h3>
-
-<p>
-Delivery available all over Pakistan. Delivery charges apply.
-</p>
+    <p>
+        Available for your convenience
+    </p>
 
 </div>
 
 
-<div class="feature">
+<div class="benefit">
 
-<div class="icon">◇</div>
+    <h3>PREMIUM QUALITY</h3>
 
-<h3>Cash on Delivery</h3>
-
-<p>
-Convenient payment on delivery.
-</p>
+    <p>
+        Beautiful fabrics and stitching
+    </p>
 
 </div>
 
 
-<div class="feature">
+<div class="benefit">
 
-<div class="icon">♡</div>
+    <h3>CUSTOMER CARE</h3>
 
-<h3>Customer Care</h3>
-
-<p>
-Contact us directly through WhatsApp for assistance.
-</p>
+    <p>
+        Order directly through WhatsApp
+    </p>
 
 </div>
-
-</section>
-
-
-<!-- COLLECTION PREVIEW -->
-
-<section class="collection">
-
-<div class="section-label">
-Gul Rukh • Edition 1
-</div>
-
-<h2>
-Discover Our Collection
-</h2>
-
-<p class="section-intro">
-Meet Gul Rukh Edition 1 — eight carefully selected designs
-celebrating colour, femininity and timeless Pakistani elegance.
-</p>
-
-
-<div class="products">
-
-
-<div class="product">
-
-<div class="product-image">
-
-<img src="images/Dress1.png"
-alt="Dusty Rose Enigma">
-
-</div>
-
-<h3>Dusty Rose Enigma</h3>
-
-<p>PKR 4,999</p>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">
-
-<img src="images/Dress2.png"
-alt="Amethyst Threadwork">
-
-</div>
-
-<h3>Amethyst Threadwork</h3>
-
-<p>PKR 2,999</p>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">
-
-<img src="images/dress3.png"
-alt="Saffron Breeze">
-
-</div>
-
-<h3>Saffron Breeze</h3>
-
-<p>PKR 5,500</p>
-
-</div>
-
-
-</div>
-
-
-<a href="collection.html"
-class="btn btn-main">
-View All 8 Designs
-</a>
 
 </section>
 
 
 <!-- ABOUT US -->
 
-<section class="about" id="about">
+<section
+class="about"
+id="about">
 
-
-<div class="about-image">
-
-<img src="images/dress5.png"
-alt="NAZAQAT Gul Rukh Collection">
-
-</div>
-
-
-<div class="about-text">
-
-<div class="section-label">
-Our Story
+<div class="small-title">
+    ABOUT NAZAQAT
 </div>
 
 <h2>
-Where Tradition Meets Elegance
+    Where Tradition Meets Elegance
 </h2>
 
 <p>
-NAZAQAT is a Pakistani fashion brand created around the belief
-that true elegance lies in the details. Our vision is to celebrate
-the beauty of Pakistani fashion while bringing a refined and
-contemporary approach to traditional dressing.
+
+NAZAQAT is a Pakistani stitched fashion brand created around
+elegance, femininity and timeless style. Our collections bring
+together carefully selected colours, graceful patterns and
+beautiful detailing to create outfits designed for women who
+appreciate traditional Pakistani fashion with a refined,
+contemporary touch.
+
+<br><br>
+
+Our Gul Rukh Edition 1 celebrates individuality through a
+collection of stitched ensembles, each with its own distinctive
+character. From soft romantic shades to rich statement colours,
+every design is selected to bring confidence and elegance to
+your wardrobe.
+
+<br><br>
+
+At NAZAQAT, we believe that true style is found in the smallest
+details. Every collection reflects our passion for beautiful
+Pakistani fashion and our commitment to creating outfits that
+feel graceful, distinctive and effortless.
+
+<br><br>
+
+<strong>NAZAQAT — Grace In Every Stitch.</strong>
+
 </p>
-
-<p>
-Our collections bring together distinctive prints, carefully
-selected colours and graceful stitched silhouettes. We aim to
-create outfits that feel beautiful, comfortable and effortlessly
-elegant.
-</p>
-
-<p>
-Our debut collection,
-<strong>Gul Rukh — Edition 1</strong>,
-introduces eight individual designs, each created with its own
-character and personality. From delicate floral inspiration and
-threadwork to richer colours and statement motifs, Gul Rukh
-celebrates different expressions of feminine style.
-</p>
-
-<p>
-NAZAQAT is designed for women who appreciate timeless Pakistani
-fashion and want pieces that can be worn confidently for everyday
-moments, gatherings and special occasions.
-</p>
-
-<p>
-Our goal is to make every NAZAQAT piece feel considered,
-graceful and special.
-</p>
-
-<p>
-<strong>Grace In Every Stitch.</strong>
-</p>
-
-<br>
-
-<a href="collection.html"
-class="btn btn-main">
-Explore Gul Rukh
-</a>
-
-</div>
 
 </section>
 
 
-<!-- EDITION -->
+<!-- FEATURED COLLECTION -->
 
-<section class="edition">
+<section class="featured">
 
-<div class="section-label">
-The Debut Collection
+<div class="small-title">
+    GUL RUKH • EDITION 1
 </div>
 
 <h2>
-Gul Rukh — Edition 1
+    Featured Collection
 </h2>
 
-<p>
-Eight distinctive designs, each expressing its own character.
-Discover Dusty Rose Enigma, Amethyst Threadwork, Saffron Breeze,
-Emerald Deco, Gul Rukh Essence, Master Piece, Coral Symphony
-and Terracotta Motif.
-</p>
 
-<a href="collection.html"
-class="btn">
-View Collection
-</a>
-
-</section>
+<div class="products">
 
 
-<!-- CONTACT -->
+<!-- DRESS 1 -->
 
-<section class="contact" id="contact">
+<div class="product">
 
-<div class="section-label">
-Get In Touch
-</div>
+    <div class="product-image">
 
-<h2>
-Contact NAZAQAT
-</h2>
+        <img
+        src="images/Dress1.png"
+        alt="Dusty Rose Enigma">
 
-<p class="section-intro">
-Have a question about a design, price, availability or delivery?
-Contact us directly and our team will be happy to assist you.
-</p>
+    </div>
 
+    <h3>
+        Dusty Rose Enigma
+    </h3>
 
-<div class="contact-grid">
+    <div class="price">
+        PKR 4,999
+    </div>
 
+    <a
+    class="order"
+    href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Dusty%20Rose%20Enigma.">
 
-<div class="contact-box">
+        ORDER NOW
 
-<h3>WhatsApp</h3>
-
-<p>
-For orders and product enquiries
-</p>
-
-<br>
-
-<a href="https://wa.me/923166955002">
-<strong>+92 316 6955002</strong>
-</a>
+    </a>
 
 </div>
 
 
-<div class="contact-box">
+<!-- DRESS 2 -->
 
-<h3>Instagram</h3>
+<div class="product">
 
-<p>
-Follow NAZAQAT for new arrivals,
-collection updates and styling inspiration.
-</p>
+    <div class="product-image">
 
-<br>
+        <img
+        src="images/Dress2.png"
+        alt="Amethyst Threadwork">
 
-<a href="https://www.instagram.com/nazaqat_2012/">
-<strong>@nazaqat_2012</strong>
-</a>
+    </div>
+
+    <h3>
+        Amethyst Threadwork
+    </h3>
+
+    <div class="price">
+        PKR 2,999
+    </div>
+
+    <a
+    class="order"
+    href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Amethyst%20Threadwork.">
+
+        ORDER NOW
+
+    </a>
+
+</div>
+
+
+<!-- DRESS 3 -->
+
+<div class="product">
+
+    <div class="product-image">
+
+        <img
+        src="images/dress3.png"
+        alt="Saffron Breeze">
+
+    </div>
+
+    <h3>
+        Saffron Breeze
+    </h3>
+
+    <div class="price">
+        PKR 5,500
+    </div>
+
+    <a
+    class="order"
+    href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Saffron%20Breeze.">
+
+        ORDER NOW
+
+    </a>
 
 </div>
 
 
-<div class="contact-box">
+<!-- DRESS 4 -->
 
-<h3>Delivery</h3>
+<div class="product">
 
-<p>
-We deliver all over Pakistan.
-</p>
+    <div class="product-image">
 
-<br>
+        <img
+        src="images/dress4.png"
+        alt="Emerald Deco">
 
-<p>
-<strong>Delivery charges apply.</strong>
-</p>
+    </div>
+
+    <h3>
+        Emerald Deco
+    </h3>
+
+    <div class="price">
+        PKR 4,999
+    </div>
+
+    <a
+    class="order"
+    href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Emerald%20Deco.">
+
+        ORDER NOW
+
+    </a>
 
 </div>
 
+</div>
+
+
+<div class="view-all">
+
+    <a
+    class="btn"
+    href="collection.html">
+
+        VIEW ALL 8 DESIGNS
+
+    </a>
 
 </div>
 
@@ -992,138 +946,133 @@ We deliver all over Pakistan.
 
 <section class="instagram">
 
-<div class="section-label">
-Follow Our Journey
+<div class="small-title">
+    FOLLOW OUR JOURNEY
 </div>
 
 <h2>
-@nazaqat_2012
+    @nazaqat_2012
 </h2>
 
 <p>
-Follow us for new arrivals, collection updates
-and the latest from NAZAQAT.
+    Follow NAZAQAT for new arrivals,
+    Gul Rukh collection updates and our latest designs.
 </p>
-
-<a href="https://www.instagram.com/nazaqat_2012/"
-class="btn btn-main">
-Follow on Instagram
-</a>
 
 </section>
 
 
 <!-- FOOTER -->
 
-<footer>
+<footer id="contact">
 
 <div class="footer-grid">
 
 
 <div>
 
-<img
-src="images/nazaqat tranparent logo.png"
-class="footer-logo"
-alt="NAZAQAT Logo">
+    <!-- EXACT SAME LOGO -->
 
-<p>
-Elegant Pakistani stitched fashion created
-with attention to colour, detail and timeless style.
-</p>
-
-<p>
-<strong>Grace In Every Stitch.</strong>
-</p>
-
-</div>
+    <img
+    class="footer-logo"
+    src="images/nazaqat%20tranparent%20logo.png"
+    alt="NAZAQAT">
 
 
-<div>
+    <p>
 
-<h3>Quick Links</h3>
+        Elegant Pakistani stitched fashion created
+        with attention to colour, detail and timeless style.
 
-<p>
+    </p>
 
-<a href="index.html">
-Home
-</a>
-
-<br>
-
-<a href="collection.html">
-Collection
-</a>
-
-<br>
-
-<a href="#about">
-About Us
-</a>
-
-<br>
-
-<a href="#contact">
-Contact
-</a>
-
-</p>
+    <p>
+        <strong>
+            Grace In Every Stitch.
+        </strong>
+    </p>
 
 </div>
 
 
 <div>
 
-<h3>Get In Touch</h3>
+    <h3>
+        Quick Links
+    </h3>
 
-<p>
-WhatsApp
-<br>
+    <div class="footer-links">
 
-<a href="https://wa.me/923166955002">
-+92 316 6955002
-</a>
-</p>
+        <a href="index.html">
+            Home
+        </a>
 
-<p>
-Instagram
-<br>
+        <a href="collection.html">
+            Collection
+        </a>
 
-<a href="https://www.instagram.com/nazaqat_2012/">
-@nazaqat_2012
-</a>
-</p>
+        <a href="#about">
+            About Us
+        </a>
 
-<p>
-Delivery available all over Pakistan.
-<br>
-Delivery charges apply.
-</p>
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
 
 </div>
 
 
+<div>
+
+    <h3>
+        Get In Touch
+    </h3>
+
+    <p>
+        WhatsApp
+        <br>
+        +92 316 6955002
+    </p>
+
+    <p>
+        Instagram
+        <br>
+        @nazaqat_2012
+    </p>
+
+    <p>
+        Delivery available all over Pakistan.
+        <br>
+        Delivery charges apply.
+    </p>
+
+</div>
+
 </div>
 
 
-<div class="footer-bottom">
+<div class="copyright">
 
-© 2026 NAZAQAT • Gul Rukh Edition 1 • All Rights Reserved
+    © 2026 NAZAQAT. All Rights Reserved.
+    • Gul Rukh Edition 1
 
 </div>
 
 </footer>
 
 
-<!-- WHATSAPP BUTTON -->
+<!-- FLOATING WHATSAPP -->
 
 <a
-href="https://wa.me/923166955002"
-class="whatsapp">
-WhatsApp
+class="whatsapp"
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20know%20more%20about%20your%20collection.">
+
+    WhatsApp
+
 </a>
 
 
 </body>
-
 </html>
