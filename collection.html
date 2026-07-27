@@ -5,9 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gul Rukh Edition 1 | NAZAQAT Collection</title>
+<title>Gul Rukh Volume 1 | NAZAQAT</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
     margin:0;
@@ -39,7 +43,7 @@ a{
     color:#ffffff;
     text-align:center;
     padding:10px 15px;
-    font-size:13px;
+    font-size:12px;
     letter-spacing:1.5px;
 }
 
@@ -55,12 +59,10 @@ header{
 .navbar{
     max-width:1400px;
     margin:auto;
-    min-height:145px;
-
+    min-height:135px;
     display:grid;
     grid-template-columns:1fr auto 1fr;
     align-items:center;
-
     padding:10px 5%;
 }
 
@@ -68,16 +70,17 @@ header{
 .nav-right{
     display:flex;
     align-items:center;
-    gap:35px;
+    gap:32px;
 }
 
 .nav-right{
     justify-content:flex-end;
 }
 
-.navbar a{
-    font-size:14px;
-    letter-spacing:1px;
+.navbar nav a{
+    font-size:13px;
+    letter-spacing:1.2px;
+    transition:0.3s;
 }
 
 .navbar nav a:hover{
@@ -90,13 +93,13 @@ header{
 
 .logo{
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 }
 
 .logo img{
-    width:230px;
-    height:120px;
+    width:210px;
+    height:110px;
     object-fit:contain;
     display:block;
 }
@@ -106,19 +109,14 @@ header{
 ========================= */
 
 .collection-banner{
+    background:#f5e7df;
     text-align:center;
-    padding:75px 20px 65px;
-
-    background:
-    linear-gradient(
-        rgba(250,239,234,0.92),
-        rgba(250,239,234,0.92)
-    );
+    padding:70px 20px 60px;
 }
 
-.edition{
+.collection-small{
     color:#a45c68;
-    font-size:13px;
+    font-size:12px;
     letter-spacing:6px;
     margin-bottom:18px;
 }
@@ -131,52 +129,49 @@ header{
 }
 
 .collection-banner h1 span{
+    display:block;
     color:#a45c68;
+    font-size:30px;
     font-style:italic;
+    margin-top:8px;
 }
 
 .collection-banner p{
-    max-width:700px;
+    max-width:760px;
     margin:auto;
-    line-height:1.8;
     color:#69534f;
-    font-size:16px;
+    font-size:15px;
+    line-height:1.8;
 }
 
 /* =========================
-   COLLECTION INFO
+   INFORMATION BAR
 ========================= */
 
-.collection-info{
+.info-bar{
     background:#ffffff;
-
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:60px;
-
+    gap:45px;
     flex-wrap:wrap;
-
-    padding:20px;
-
-    border-top:1px solid #eee1dc;
-    border-bottom:1px solid #eee1dc;
+    padding:22px 20px;
+    border-bottom:1px solid #eaded8;
 }
 
-.collection-info span{
-    font-size:12px;
-    letter-spacing:1px;
-    color:#614b47;
+.info-bar span{
+    font-size:11px;
+    letter-spacing:1.2px;
 }
 
 /* =========================
-   PRODUCTS
+   COLLECTION AREA
 ========================= */
 
 .collection{
     max-width:1350px;
     margin:auto;
-    padding:75px 5%;
+    padding:75px 4%;
 }
 
 .collection-heading{
@@ -184,188 +179,189 @@ header{
     margin-bottom:45px;
 }
 
-.collection-heading .small{
+.collection-heading p{
     color:#a45c68;
-    letter-spacing:5px;
     font-size:12px;
-    margin-bottom:12px;
+    letter-spacing:5px;
+    margin-bottom:13px;
 }
 
 .collection-heading h2{
     font-family:Georgia, serif;
-    font-size:40px;
+    font-size:45px;
     font-weight:normal;
 }
 
-/* GRID */
+/* =========================
+   PRODUCT GRID
+
+   3 per row gives the tall
+   posters enough room.
+========================= */
 
 .products{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
 }
 
-/* PRODUCT CARD */
+/* =========================
+   PRODUCT CARD
+========================= */
 
 .product{
+    position:relative;
     background:#ffffff;
     border:1px solid #eaded8;
-
     overflow:hidden;
-
-    position:relative;
-
-    transition:0.3s;
+    transition:0.3s ease;
 }
 
 .product:hover{
     transform:translateY(-5px);
-
-    box-shadow:
-    0 15px 35px rgba(60,40,35,0.10);
+    box-shadow:0 15px 35px rgba(60,40,35,0.10);
 }
 
-/* IMAGE */
+/* =========================
+   POSTER IMAGE
+
+   IMPORTANT:
+   object-fit: contain means
+   poster will NOT be cropped.
+========================= */
 
 .product-image{
     width:100%;
-    height:470px;
-
+    height:620px;
+    background:#f7f1ed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     overflow:hidden;
-
-    background:#eee5e0;
 }
 
 .product-image img{
     width:100%;
     height:100%;
-
-    object-fit:cover;
-    object-position:center top;
-
+    object-fit:contain;
+    object-position:center;
     display:block;
-
     transition:transform 0.4s ease;
 }
 
 .product:hover .product-image img{
-    transform:scale(1.025);
+    transform:scale(1.015);
 }
 
-/* EDITION LABEL */
+/* =========================
+   VOLUME BADGE
+========================= */
 
 .badge{
     position:absolute;
     top:15px;
     left:15px;
-
+    z-index:5;
     background:#a45c68;
     color:#ffffff;
-
-    padding:8px 13px;
-
+    padding:9px 14px;
     font-size:10px;
-    letter-spacing:1px;
-
-    z-index:2;
+    letter-spacing:1.5px;
 }
 
-/* PRODUCT DETAILS */
+/* =========================
+   PRODUCT INFORMATION
+========================= */
 
 .product-details{
     text-align:center;
-    padding:22px 15px 25px;
+    padding:25px 20px 28px;
 }
 
-.product-number{
+.design-number{
     color:#a45c68;
     font-size:10px;
     letter-spacing:3px;
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
-.product h3{
+.product-details h3{
     font-family:Georgia, serif;
-    font-size:21px;
+    font-size:23px;
     font-weight:normal;
     margin-bottom:10px;
 }
 
-.product-description{
+.description{
     color:#79635f;
     font-size:13px;
-    line-height:1.6;
-    min-height:42px;
-    margin-bottom:12px;
+    line-height:1.7;
+    min-height:45px;
+    margin-bottom:13px;
 }
 
 .price{
     color:#a45c68;
-    font-size:18px;
+    font-size:19px;
     font-weight:bold;
-    margin-bottom:18px;
-}
-
-/* ORDER BUTTON */
-
-.order{
-    display:block;
-
-    background:#a45c68;
-    color:#ffffff;
-
-    padding:14px 10px;
-
-    font-size:12px;
-    letter-spacing:1.5px;
-
-    transition:0.2s;
-}
-
-.order:hover{
-    background:#8e4d59;
+    margin-bottom:20px;
 }
 
 /* =========================
-   ORDER INFORMATION
+   ORDER BUTTON
 ========================= */
 
-.order-info{
-    background:#f1e2dc;
-
-    padding:70px 6%;
-
-    text-align:center;
+.order{
+    display:block;
+    width:100%;
+    background:#a45c68;
+    color:#ffffff;
+    padding:14px 10px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    transition:0.3s;
 }
 
-.order-info h2{
+.order:hover{
+    background:#874954;
+}
+
+/* =========================
+   ORDER SECTION
+========================= */
+
+.order-section{
+    background:#f1e2dc;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.order-section h2{
     font-family:Georgia, serif;
-    font-size:38px;
+    font-size:40px;
     font-weight:normal;
     margin-bottom:18px;
 }
 
-.order-info p{
-    max-width:750px;
+.order-section p{
+    max-width:720px;
     margin:0 auto 30px;
+    color:#69534f;
     line-height:1.8;
-    color:#66514d;
+    font-size:15px;
 }
 
-.whatsapp-button{
+.main-order-button{
     display:inline-block;
-
     background:#a45c68;
     color:white;
-
     padding:16px 30px;
-
-    font-size:13px;
-    letter-spacing:1px;
+    font-size:12px;
+    letter-spacing:1.5px;
 }
 
-.whatsapp-button:hover{
-    background:#8e4d59;
+.main-order-button:hover{
+    background:#874954;
 }
 
 /* =========================
@@ -375,34 +371,29 @@ header{
 footer{
     background:#402b29;
     color:#f8eeee;
-
     padding:65px 6% 25px;
 }
 
 .footer-grid{
     max-width:1300px;
     margin:auto;
-
     display:grid;
     grid-template-columns:2fr 1fr 1.4fr;
-
     gap:60px;
 }
 
 .footer-logo{
-    width:220px;
-    height:125px;
-
+    width:210px;
+    height:115px;
     object-fit:contain;
-
     display:block;
-
     margin-bottom:20px;
 }
 
 footer h3{
     font-family:Georgia, serif;
     font-size:23px;
+    font-weight:normal;
     margin-bottom:20px;
 }
 
@@ -420,13 +411,9 @@ footer a{
 .copyright{
     max-width:1300px;
     margin:45px auto 0;
-
     border-top:1px solid #725652;
-
     padding-top:20px;
-
     text-align:center;
-
     font-size:12px;
 }
 
@@ -436,22 +423,15 @@ footer a{
 
 .whatsapp{
     position:fixed;
-
     right:25px;
     bottom:25px;
-
     background:#25D366;
     color:#ffffff;
-
     padding:16px 23px;
-
     border-radius:30px;
-
-    font-size:14px;
     font-weight:bold;
-
+    font-size:14px;
     z-index:1000;
-
     box-shadow:0 5px 18px rgba(0,0,0,0.15);
 }
 
@@ -465,17 +445,26 @@ footer a{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .product-image{
+        height:650px;
+    }
+
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:750px){
+@media(max-width:700px){
+
+    .topbar{
+        font-size:10px;
+        line-height:1.6;
+    }
 
     .navbar{
         grid-template-columns:1fr;
-        gap:15px;
+        gap:12px;
         padding:15px;
     }
 
@@ -484,45 +473,31 @@ footer a{
     }
 
     .logo img{
-        width:200px;
-        height:105px;
+        width:180px;
+        height:95px;
     }
 
     .nav-left,
     .nav-right{
         justify-content:center;
-        gap:20px;
+        gap:18px;
         flex-wrap:wrap;
     }
 
     .collection-banner{
-        padding:55px 20px;
+        padding:50px 20px;
     }
 
     .collection-banner h1{
         font-size:43px;
     }
 
-    .collection-info{
-        gap:20px;
+    .collection-banner h1 span{
+        font-size:25px;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:550px){
-
-    .topbar{
-        font-size:10px;
-        line-height:1.6;
-    }
-
-    .logo img{
-        width:180px;
-        height:95px;
+    .collection-heading h2{
+        font-size:36px;
     }
 
     .products{
@@ -530,11 +505,13 @@ footer a{
     }
 
     .product-image{
-        height:520px;
+        height:auto;
+        aspect-ratio:4 / 5;
     }
 
-    .collection-banner h1{
-        font-size:38px;
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
     }
 
 }
@@ -542,7 +519,6 @@ footer a{
 </style>
 
 </head>
-
 
 <body>
 
@@ -552,13 +528,11 @@ footer a{
 ========================= -->
 
 <div class="topbar">
-
-    DELIVERY AVAILABLE ALL OVER PAKISTAN
-    &nbsp; | &nbsp;
-    DELIVERY CHARGES APPLY
-    &nbsp; | &nbsp;
-    CASH ON DELIVERY AVAILABLE
-
+DELIVERY AVAILABLE ALL OVER PAKISTAN
+&nbsp; | &nbsp;
+DELIVERY CHARGES APPLY
+&nbsp; | &nbsp;
+CASH ON DELIVERY AVAILABLE
 </div>
 
 
@@ -570,49 +544,28 @@ footer a{
 
 <div class="navbar">
 
-
 <nav class="nav-left">
-
-    <a href="index.html">
-        HOME
-    </a>
-
-    <a href="collection.html">
-        COLLECTION
-    </a>
-
-    <a href="index.html#about">
-        ABOUT US
-    </a>
-
+<a href="index.html">HOME</a>
+<a href="collection.html">COLLECTION</a>
+<a href="index.html#about">ABOUT US</a>
 </nav>
 
+<a class="logo" href="index.html">
 
-<!-- YOUR EXACT GITHUB LOGO -->
-
-<a
-class="logo"
-href="index.html">
-
-    <img
-    src="images/nazaqat%20tranparent%20logo.png"
-    alt="NAZAQAT - Grace In Every Stitch">
+<img
+src="images/nazaqat%20tranparent%20logo.png"
+alt="NAZAQAT Logo">
 
 </a>
 
-
 <nav class="nav-right">
+<a href="#contact">CONTACT</a>
 
-    <a href="#contact">
-        CONTACT
-    </a>
-
-    <a href="https://wa.me/923166955002">
-        WHATSAPP
-    </a>
+<a href="https://wa.me/923166955002">
+WHATSAPP
+</a>
 
 </nav>
-
 
 </div>
 
@@ -620,27 +573,24 @@ href="index.html">
 
 
 <!-- =========================
-     COLLECTION BANNER
+     COLLECTION INTRO
 ========================= -->
 
 <section class="collection-banner">
 
-<div class="edition">
-    NAZAQAT PRESENTS
+<div class="collection-small">
+NAZAQAT • FIRST VOLUME
 </div>
 
 <h1>
-    Gul Rukh
-    <span>Edition 1</span>
+Gul Rukh
+<span>Volume 1</span>
 </h1>
 
 <p>
-
-A collection inspired by graceful colours,
-timeless Pakistani style and the beauty found
-in every detail. Discover all eight designs
-from NAZAQAT's Gul Rukh Edition 1.
-
+Introducing Gul Rukh Volume 1, the first collection from NAZAQAT.
+Eight distinctive stitched Pakistani designs brought together
+through graceful colours, elegant details and timeless style.
 </p>
 
 </section>
@@ -650,43 +600,36 @@ from NAZAQAT's Gul Rukh Edition 1.
      INFORMATION
 ========================= -->
 
-<div class="collection-info">
+<div class="info-bar">
 
-    <span>
-        8 EXCLUSIVE DESIGNS
-    </span>
+<span>8 EXCLUSIVE DESIGNS</span>
 
-    <span>
-        STITCHED COLLECTION
-    </span>
+<span>GUL RUKH • VOLUME 1</span>
 
-    <span>
-        DELIVERY ACROSS PAKISTAN
-    </span>
+<span>STITCHED COLLECTION</span>
 
-    <span>
-        DELIVERY CHARGES APPLY
-    </span>
+<span>DELIVERY ACROSS PAKISTAN</span>
+
+<span>DELIVERY CHARGES APPLY</span>
 
 </div>
 
 
 <!-- =========================
-     COLLECTION
+     PRODUCTS
 ========================= -->
 
 <section class="collection">
 
-
 <div class="collection-heading">
 
-    <div class="small">
-        GRACE IN EVERY STITCH
-    </div>
+<p>
+GRACE IN EVERY STITCH
+</p>
 
-    <h2>
-        Explore The Collection
-    </h2>
+<h2>
+Explore The Collection
+</h2>
 
 </div>
 
@@ -694,14 +637,14 @@ from NAZAQAT's Gul Rukh Edition 1.
 <div class="products">
 
 
-<!-- =====================
-     DRESS 1
-===================== -->
+<!-- =========================
+     DESIGN 1
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -712,31 +655,29 @@ alt="Dusty Rose Enigma">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 01
+<div class="design-number">
+DESIGN 01
 </div>
 
 <h3>
-    Dusty Rose Enigma
+Dusty Rose Enigma
 </h3>
 
-<p class="product-description">
-    A graceful dusty rose design created with
-    timeless feminine elegance.
+<p class="description">
+A graceful dusty rose ensemble with a timeless feminine character.
 </p>
 
 <div class="price">
-    PKR 4,999
+PKR 4,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Dusty%20Rose%20Enigma%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Dusty%20Rose%20Enigma%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -745,14 +686,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 2
-===================== -->
+<!-- =========================
+     DESIGN 2
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -763,31 +704,29 @@ alt="Amethyst Threadwork">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 02
+<div class="design-number">
+DESIGN 02
 </div>
 
 <h3>
-    Amethyst Threadwork
+Amethyst Threadwork
 </h3>
 
-<p class="product-description">
-    An elegant design combining refined detail
-    with a distinctive amethyst-inspired character.
+<p class="description">
+Rich amethyst tones combined with intricate and graceful detailing.
 </p>
 
 <div class="price">
-    PKR 2,999
+PKR 2,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Amethyst%20Threadwork%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Amethyst%20Threadwork%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -796,14 +735,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 3
-===================== -->
+<!-- =========================
+     DESIGN 3
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -814,31 +753,29 @@ alt="Saffron Breeze">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 03
+<div class="design-number">
+DESIGN 03
 </div>
 
 <h3>
-    Saffron Breeze
+Saffron Breeze
 </h3>
 
-<p class="product-description">
-    A warm and graceful ensemble inspired by
-    effortless Pakistani elegance.
+<p class="description">
+Warm saffron tones inspired by effortless elegance and graceful style.
 </p>
 
 <div class="price">
-    PKR 5,500
+PKR 5,500
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Saffron%20Breeze%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Saffron%20Breeze%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -847,14 +784,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 4
-===================== -->
+<!-- =========================
+     DESIGN 4
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -865,31 +802,29 @@ alt="Emerald Deco">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 04
+<div class="design-number">
+DESIGN 04
 </div>
 
 <h3>
-    Emerald Deco
+Emerald Deco
 </h3>
 
-<p class="product-description">
-    Rich tones and elegant detailing come
-    together in this statement design.
+<p class="description">
+Elegant emerald tones create a sophisticated and confident statement.
 </p>
 
 <div class="price">
-    PKR 4,999
+PKR 4,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Emerald%20Deco%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Emerald%20Deco%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -898,14 +833,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 5
-===================== -->
+<!-- =========================
+     DESIGN 5
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -916,31 +851,29 @@ alt="Gul Rukh Essence">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 05
+<div class="design-number">
+DESIGN 05
 </div>
 
 <h3>
-    Gul Rukh Essence
+Gul Rukh Essence
 </h3>
 
-<p class="product-description">
-    The signature expression of Gul Rukh,
-    designed around grace and timeless beauty.
+<p class="description">
+A signature Gul Rukh design celebrating timeless beauty and elegance.
 </p>
 
 <div class="price">
-    PKR 6,999
+PKR 6,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Gul%20Rukh%20Essence%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Gul%20Rukh%20Essence%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -949,14 +882,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 6
-===================== -->
+<!-- =========================
+     DESIGN 6
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -967,31 +900,29 @@ alt="Master Piece">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 06
+<div class="design-number">
+DESIGN 06
 </div>
 
 <h3>
-    Master Piece
+Master Piece
 </h3>
 
-<p class="product-description">
-    A distinctive ensemble designed to make
-    an elegant and confident statement.
+<p class="description">
+A distinctive ensemble designed to make an elegant statement.
 </p>
 
 <div class="price">
-    PKR 4,999
+PKR 4,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Master%20Piece%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Master%20Piece%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -1000,14 +931,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 7
-===================== -->
+<!-- =========================
+     DESIGN 7
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -1018,31 +949,29 @@ alt="Coral Symphony">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 07
+<div class="design-number">
+DESIGN 07
 </div>
 
 <h3>
-    Coral Symphony
+Coral Symphony
 </h3>
 
-<p class="product-description">
-    Beautiful coral-inspired tones meet
-    graceful traditional styling.
+<p class="description">
+Beautiful coral-inspired tones paired with graceful traditional styling.
 </p>
 
 <div class="price">
-    PKR 4,999
+PKR 4,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Coral%20Symphony%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Coral%20Symphony%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -1051,14 +980,14 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 </div>
 
 
-<!-- =====================
-     DRESS 8
-===================== -->
+<!-- =========================
+     DESIGN 8
+========================= -->
 
 <div class="product">
 
 <div class="badge">
-    GUL RUKH
+GUL RUKH • VOLUME 1
 </div>
 
 <div class="product-image">
@@ -1069,31 +998,29 @@ alt="Terracotta Motif">
 
 </div>
 
-
 <div class="product-details">
 
-<div class="product-number">
-    DESIGN 08
+<div class="design-number">
+DESIGN 08
 </div>
 
 <h3>
-    Terracotta Motif
+Terracotta Motif
 </h3>
 
-<p class="product-description">
-    Earthy elegance and graceful motifs create
-    the final statement of the collection.
+<p class="description">
+Earthy terracotta tones complete the first Gul Rukh volume with elegance.
 </p>
 
 <div class="price">
-    PKR 4,999
+PKR 4,999
 </div>
 
 <a
 class="order"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Terracotta%20Motif%20from%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20order%20Terracotta%20Motif%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER ON WHATSAPP
+ORDER ON WHATSAPP
 
 </a>
 
@@ -1111,26 +1038,23 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
      ORDER SECTION
 ========================= -->
 
-<section class="order-info">
+<section class="order-section">
 
 <h2>
-    Found Your Favourite?
+Found Your Favourite?
 </h2>
 
 <p>
-
-Ordering from NAZAQAT is simple. Select your favourite
-design from Gul Rukh Edition 1 and contact us directly
-through WhatsApp. Delivery is available across Pakistan
-and delivery charges apply.
-
+Choose your favourite design from Gul Rukh Volume 1 and
+contact NAZAQAT directly through WhatsApp to place your order.
+Delivery is available all over Pakistan and delivery charges apply.
 </p>
 
 <a
-class="whatsapp-button"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20place%20an%20order%20from%20Gul%20Rukh%20Edition%201.">
+class="main-order-button"
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20place%20an%20order%20from%20Gul%20Rukh%20Volume%201.">
 
-    ORDER THROUGH WHATSAPP
+ORDER THROUGH WHATSAPP
 
 </a>
 
@@ -1143,7 +1067,6 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 
 <footer id="contact">
 
-
 <div class="footer-grid">
 
 
@@ -1152,20 +1075,15 @@ href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%2
 <img
 class="footer-logo"
 src="images/nazaqat%20tranparent%20logo.png"
-alt="NAZAQAT">
-
+alt="NAZAQAT Logo">
 
 <p>
-
-Elegant Pakistani stitched fashion created
-with attention to colour, detail and timeless style.
-
+Elegant Pakistani stitched fashion created with attention
+to colour, detail and timeless style.
 </p>
 
 <p>
-<strong>
-Grace In Every Stitch.
-</strong>
+<strong>Grace In Every Stitch.</strong>
 </p>
 
 </div>
@@ -1207,20 +1125,17 @@ Get In Touch
 </h3>
 
 <p>
-WhatsApp
-<br>
+WhatsApp<br>
 +92 316 6955002
 </p>
 
 <p>
-Instagram
-<br>
+Instagram<br>
 @nazaqat_2012
 </p>
 
 <p>
-Delivery available all over Pakistan.
-<br>
+Delivery available all over Pakistan.<br>
 Delivery charges apply.
 </p>
 
@@ -1233,10 +1148,9 @@ Delivery charges apply.
 <div class="copyright">
 
 © 2026 NAZAQAT. All Rights Reserved.
-• Gul Rukh Edition 1
+• Gul Rukh Volume 1
 
 </div>
-
 
 </footer>
 
@@ -1247,7 +1161,7 @@ Delivery charges apply.
 
 <a
 class="whatsapp"
-href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20know%20more%20about%20Gul%20Rukh%20Edition%201.">
+href="https://wa.me/923166955002?text=Hello%20NAZAQAT,%20I%20would%20like%20to%20know%20more%20about%20Gul%20Rukh%20Volume%201.">
 
 WhatsApp
 
